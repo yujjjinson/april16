@@ -1,0 +1,38 @@
+package senior;
+
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Panel;
+
+import senior.member1.Member1;
+
+public class Study1 extends Frame{
+	Member1 mem1;//첫번째 조원이 만든 패널 선언
+	Panel pan2;//두번째 조원이 만든 패널 선언
+	public Study1(String str) {
+		super(str);
+		mem1 = new Member1();//첫번째 조원이 만든 패널 생성
+		//배치관리자 설정,FlowLayout,BorderLayout,GridLayout
+		this.setLayout(new GridLayout(1,4));
+		pan2 = new Panel();//두번째 조원이 만든 패널 생성
+		pan2.setBackground(Color.YELLOW);
+		this.add(mem1);//첫번째 조원이 만든 패널을 윈도우에 붙임
+		this.add(pan2);//두번째 조원이 만든 패널을 윈도우에 붙임
+		//윈도우의 크기 설정
+		this.setSize(600, 400);
+		//윈도우 활성화
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+		new Study1("정보관리시스템 ver1.0");
+	}
+}
+
+
+
+
+
+
+
+
