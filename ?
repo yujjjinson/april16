@@ -1,0 +1,37 @@
+package senior.member1;
+
+import java.awt.Button;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Panel;
+//조원이 만든 윈도우를 메인 윈도우에 붙이는 방법
+//1. 윈도우를 패널로 바꾼다.(Panel을 상속한다.)
+//2. 패널은 윈도우가 아니므로 제목처리를 할 수 없다.
+//3. 패널은 윈도우가 아니므로 사이즈설정을 할 수 없다.
+//4. 패널은 윈도우가 아니므로 윈도우 활성화를 사용할 수 없다.
+
+//public class Member1 extends Frame {
+public class Member1 extends Panel {
+	Button btn1, btn2; Label label;
+//	public Member1(String title){
+//		super(title);
+	public Member1(){
+		btn1 = new Button("O K");
+		btn2 = new Button("CANCEL");
+		label = new Label("환영합니다.");
+		this.setLayout(new GridLayout(3,1));
+		this.add(btn1); this.add(btn2); this.add(label);
+//		this.setSize(300, 200);
+//		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+//		new Member1("사원관리 시스템");
+	}
+
+}
+
+
+
+
+
+
