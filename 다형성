@@ -1,0 +1,51 @@
+package senior;
+
+//다형성의 특징
+class King {
+	int gold = 100;
+	void showMe() {
+		System.out.println("나는 왕이다.");
+	}
+	void doIt() {
+		System.out.println("우리 왕국에 방문을 환영합니다.");
+	}
+}
+class Son extends King{
+	@Override
+	void showMe() {
+		System.out.println("나는 아들이다.");
+	}
+	int gold = 200;
+	void sing() {
+		System.out.println("노래를 합니다.");
+	}
+}
+public class Study3 {
+	public static void main(String[] args) {
+		King king = new Son();//다형성
+		king.doIt();//King의 메서드 doIt()
+		king.showMe();//Son이 바꾼(오버라이드한) 메서드showMe()
+		//king.sing();//다형성으로는 자식만 가지고 있는 메서드는 사용 불가
+		System.out.println(king.gold);
+		//다형성으로는 자식의 변수는 접근할 수 없다!!!!!!!!!!!!!!!!!!!!
+		
+		//다형성의 특징
+		//다형성으로 접근할 수 있는 메서드
+		//	-> 오버라이드한 메서드
+		//	-> 부모가 가지고 있는 메서드
+		//다형성으로 접근할 수 있는 변수
+		//	-> 오로지 부모의 변수만 가능
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
